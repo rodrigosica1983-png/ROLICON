@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ROLICON VALLEY</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -15,26 +23,40 @@
 
     header {
       position: fixed;
-      width: 100%;
       top: 0;
       left: 0;
-      background: rgba(0,0,0,0.5);
-      padding: 15px 30px;
+      width: 100%;
+      background: rgba(5, 10, 30, 0.75);
+      backdrop-filter: blur(8px);
+      padding: 18px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       z-index: 1000;
     }
 
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #b8fff0;
+    }
+
     nav a {
       color: white;
-      margin-left: 20px;
       text-decoration: none;
+      margin-left: 22px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #7fffe1;
     }
 
     .hero {
-      height: 100vh;
-      background-image: url('hero-rolicon.jpg');
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(5, 10, 30, 0.55), rgba(5, 10, 30, 0.70)),
+        url('hero-rolicon.jpg');
       background-size: cover;
       background-position: center;
       display: flex;
@@ -42,69 +64,178 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 20px;
+      padding: 140px 20px 80px;
     }
 
     .hero h1 {
-      font-size: 48px;
-      max-width: 900px;
+      font-size: 58px;
+      max-width: 1000px;
+      margin: 0 0 20px;
+      line-height: 1.1;
     }
 
     .hero p {
-      margin-top: 20px;
-      max-width: 600px;
+      max-width: 760px;
+      font-size: 20px;
+      margin: 0 0 28px;
     }
 
     .btn {
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: #00ffc3;
-      color: black;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
+      display: inline-block;
+      background: #86ffe8;
+      color: #07111f;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.92;
     }
 
     section {
-      padding: 80px 20px;
+      padding: 90px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
       text-align: center;
+    }
+
+    h2 {
+      font-size: 40px;
+      margin-bottom: 18px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+      margin-top: 35px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 18px;
+      padding: 24px;
+      text-align: left;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #9cfceb;
+    }
+
+    footer {
+      padding: 30px 20px;
+      text-align: center;
+      color: rgba(255,255,255,0.75);
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      nav a {
+        margin-left: 0;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
     }
   </style>
 </head>
-
 <body>
 
-<header>
-  <h2>ROLICON VALLEY</h2>
-  <nav>
-    <a href="#">Inicio</a>
-    <a href="#">Visión</a>
-    <a href="#">Ecosistema</a>
-    <a href="#">Propuesta</a>
-    <a href="#">Contacto</a>
-  </nav>
-</header>
+  <header>
+    <div class="logo">ROLICON VALLEY</div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#vision">Visión</a>
+      <a href="#ecosistema">Ecosistema</a>
+      <a href="#propuesta">Propuesta</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
 
-<section class="hero">
-  <h1>El ecosistema donde la logística, el software y el blockchain se encuentran</h1>
-  <p>ROLICON VALLEY es una visión de futuro orientada a construir infraestructura tecnológica de alto impacto.</p>
-  <button class="btn">Explorar</button>
-</section>
+  <section class="hero" id="inicio">
+    <h1>El ecosistema donde la logística, el software y el blockchain se encuentran</h1>
+    <p>ROLICON VALLEY es una visión de futuro orientada a construir infraestructura tecnológica de alto impacto en logística inteligente, software, automatización y finanzas descentralizadas.</p>
+    <a class="btn" href="#ecosistema">Explorar ecosistema</a>
+  </section>
 
-<section>
-  <h2>Nuestra visión</h2>
-  <p>Desarrollar un ecosistema sólido, escalable y de máxima calidad.</p>
-</section>
+  <section id="vision">
+    <div class="container">
+      <h2>Nuestra visión</h2>
+      <p>Construir un ecosistema sólido, escalable y de máxima calidad, donde la innovación tecnológica se transforme en soluciones reales para comercio, logística, conectividad y automatización.</p>
+    </div>
+  </section>
 
-<section>
-  <h2>Ecosistema</h2>
-  <p>RoloCoin, Blockchain Box, RoloSoft, RoloRobotics y más.</p>
-</section>
+  <section id="ecosistema">
+    <div class="container">
+      <h2>Ecosistema ROLICON</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>RoloCoin</h3>
+          <p>Infraestructura financiera digital integrada al ecosistema.</p>
+        </div>
+        <div class="card">
+          <h3>Blockchain Box</h3>
+          <p>Buzones inteligentes y automatización logística de última milla.</p>
+        </div>
+        <div class="card">
+          <h3>ROLOSOFT</h3>
+          <p>Centro de desarrollo de software y plataformas del ecosistema.</p>
+        </div>
+        <div class="card">
+          <h3>ROLOROBOTICS</h3>
+          <p>Robots autónomos, drones y sistemas inteligentes para operaciones.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section>
-  <h2>Contacto</h2>
-  <p>Próximamente...</p>
-</section>
+  <section id="propuesta">
+    <div class="container">
+      <h2>Propuesta de valor</h2>
+      <p>Integración total, innovación real, escalabilidad y calidad no negociable para construir un ecosistema tecnológico de clase mundial.</p>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="container">
+      <h2>Contacto</h2>
+      <p>Próximamente: WhatsApp, email y formulario oficial de ROLICON VALLEY.</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 ROLICON VALLEY · Todos los derechos reservados
+  </footer>
 
 </body>
 </html>
