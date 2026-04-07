@@ -1,374 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ROLICON VALLEY</title>
-  <meta name="description" content="ROLICON VALLEY: ecosistema de innovación en blockchain, logística inteligente, software, energía, robótica y tecnología avanzada." />
+
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      background: #0a0f1f;
-      color: #f2f5ff;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      background: rgba(10, 15, 31, 0.92);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      z-index: 1000;
-    }
-
-    .nav {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 20px;
-    }
-
-    .logo {
-      font-size: 1.3rem;
-      font-weight: bold;
-      color: #6ae3ff;
-      letter-spacing: 1px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      font-size: 0.95rem;
-      color: #d6ddff;
-      transition: 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: #6ae3ff;
-    }
-
-    .hero {
-      min-height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 60px 20px;
-      background:
-        radial-gradient(circle at top, rgba(64, 118, 255, 0.22), transparent 35%),
-        radial-gradient(circle at bottom right, rgba(141, 57, 255, 0.20), transparent 30%),
-        #0a0f1f;
-    }
-
-    .hero-content {
-      max-width: 900px;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      color: #ffffff;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: #c7d2ff;
-      margin-bottom: 30px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 14px 24px;
-      border-radius: 10px;
-      font-weight: bold;
-      transition: 0.3s;
-      display: inline-block;
-    }
-
-    .btn-primary {
-      background: linear-gradient(90deg, #00c2ff, #7b5cff);
+      background: #0a0f2c;
       color: white;
     }
 
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      opacity: 0.95;
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0,0,0,0.5);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
     }
 
-    .btn-secondary {
-      border: 1px solid rgba(255,255,255,0.2);
-      color: #e6ebff;
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
     }
 
-    .btn-secondary:hover {
-      background: rgba(255,255,255,0.06);
+    .hero {
+      height: 100vh;
+      background-image: url('hero-rolicon.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      max-width: 900px;
+    }
+
+    .hero p {
+      margin-top: 20px;
+      max-width: 600px;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #00ffc3;
+      color: black;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
     }
 
     section {
       padding: 80px 20px;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .section-title {
-      font-size: 2rem;
-      margin-bottom: 16px;
-      color: #ffffff;
       text-align: center;
-    }
-
-    .section-text {
-      max-width: 850px;
-      margin: 0 auto 40px;
-      text-align: center;
-      color: #bfc8ee;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 22px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 16px;
-      padding: 24px;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(106, 227, 255, 0.5);
-    }
-
-    .card h3 {
-      margin-bottom: 12px;
-      color: #6ae3ff;
-      font-size: 1.15rem;
-    }
-
-    .card p {
-      color: #d8def8;
-      font-size: 0.97rem;
-    }
-
-    .highlight {
-      color: #6ae3ff;
-      font-weight: bold;
-    }
-
-    .contact-box {
-      max-width: 800px;
-      margin: auto;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 18px;
-      padding: 32px;
-      text-align: center;
-    }
-
-    .contact-box p {
-      color: #c7d2ff;
-      margin-bottom: 20px;
-    }
-
-    footer {
-      padding: 30px 20px;
-      text-align: center;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      color: #95a0c9;
-      font-size: 0.92rem;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-
-      .hero p {
-        font-size: 1.05rem;
-      }
-
-      .nav {
-        flex-direction: column;
-        gap: 12px;
-      }
     }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <div class="nav">
-      <div class="logo">ROLICON VALLEY</div>
-      <nav class="nav-links">
-        <a href="#inicio">Inicio</a>
-        <a href="#vision">Visión</a>
-        <a href="#ecosistema">Ecosistema</a>
-        <a href="#valor">Propuesta</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-    </div>
-  </header>
+<header>
+  <h2>ROLICON VALLEY</h2>
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Visión</a>
+    <a href="#">Ecosistema</a>
+    <a href="#">Propuesta</a>
+    <a href="#">Contacto</a>
+  </nav>
+</header>
 
-  <section class="hero" id="inicio">
-    <div class="hero-content">
-      <h1>El ecosistema donde la logística, el software y el blockchain se encuentran</h1>
-      <p>
-        <span class="highlight">ROLICON VALLEY</span> es una visión de futuro orientada a construir
-        infraestructura tecnológica de alto impacto en logística inteligente, software, automatización,
-        energía, robótica y finanzas descentralizadas.
-      </p>
-      <div class="buttons">
-        <a href="#ecosistema" class="btn btn-primary">Explorar ecosistema</a>
-        <a href="#contacto" class="btn btn-secondary">Contactar</a>
-      </div>
-    </div>
-  </section>
+<section class="hero">
+  <h1>El ecosistema donde la logística, el software y el blockchain se encuentran</h1>
+  <p>ROLICON VALLEY es una visión de futuro orientada a construir infraestructura tecnológica de alto impacto.</p>
+  <button class="btn">Explorar</button>
+</section>
 
-  <section id="vision">
-    <div class="container">
-      <h2 class="section-title">Nuestra visión</h2>
-      <p class="section-text">
-        ROLICON VALLEY nace con una meta clara: desarrollar un ecosistema sólido, escalable y de máxima calidad,
-        donde la innovación tecnológica se convierta en soluciones reales para el comercio, la logística,
-        los pagos, la conectividad, la automatización y el desarrollo humano.
-      </p>
-      <p class="section-text">
-        La calidad no se negocia. Cada unidad del ecosistema está pensada para operar con estándares altos,
-        visión de largo plazo y capacidad de expansión nacional e internacional.
-      </p>
-    </div>
-  </section>
+<section>
+  <h2>Nuestra visión</h2>
+  <p>Desarrollar un ecosistema sólido, escalable y de máxima calidad.</p>
+</section>
 
-  <section id="ecosistema">
-    <div class="container">
-      <h2 class="section-title">Ecosistema ROLICON</h2>
-      <p class="section-text">
-        Estas son algunas de las áreas estratégicas que forman parte del desarrollo del proyecto.
-      </p>
+<section>
+  <h2>Ecosistema</h2>
+  <p>RoloCoin, Blockchain Box, RoloSoft, RoloRobotics y más.</p>
+</section>
 
-      <div class="grid">
-        <div class="card">
-          <h3>RoloCoin</h3>
-          <p>Infraestructura financiera digital pensada para integrarse con el ecosistema y potenciar nuevas formas de intercambio, incentivos y expansión económica.</p>
-        </div>
-
-        <div class="card">
-          <h3>Blockchain Box</h3>
-          <p>Buzones inteligentes y soluciones de entrega automatizada para transformar la logística de última milla y la recepción de paquetes.</p>
-        </div>
-
-        <div class="card">
-          <h3>ROLOSOFT</h3>
-          <p>Centro de desarrollo de software del ecosistema. Núcleo de plataformas, automatización, inteligencia operativa y escalabilidad digital.</p>
-        </div>
-
-        <div class="card">
-          <h3>ROLOROBOTICS</h3>
-          <p>Robots autónomos, drones y sistemas avanzados para automatizar operaciones logísticas, distribución y movilidad inteligente.</p>
-        </div>
-
-        <div class="card">
-          <h3>ROLOSECURITY</h3>
-          <p>División especializada en ciberseguridad avanzada, protección de infraestructura crítica y evolución tecnológica aplicada a entornos de alta exigencia.</p>
-        </div>
-
-        <div class="card">
-          <h3>RoloSpace</h3>
-          <p>Conectividad, expansión tecnológica y visión estratégica para construir resiliencia en comunicaciones e infraestructura digital.</p>
-        </div>
-
-        <div class="card">
-          <h3>MedBlock Salud</h3>
-          <p>Área orientada a salud, investigación, innovación médica, movilidad asistida y desarrollo de nuevas capacidades tecnológicas aplicadas al bienestar humano.</p>
-        </div>
-
-        <div class="card">
-          <h3>BioGen Roli / ECO CHISPA</h3>
-          <p>División energética enfocada en sustentabilidad, autonomía operativa y desarrollo de soluciones para fortalecer la resiliencia del ecosistema.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="valor">
-    <div class="container">
-      <h2 class="section-title">Propuesta de valor</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Innovación real</h3>
-          <p>No se trata solo de ideas futuristas. El objetivo es convertir visión en productos, sistemas y estructuras funcionales.</p>
-        </div>
-
-        <div class="card">
-          <h3>Integración total</h3>
-          <p>Cada unidad del ecosistema se conecta con las demás para generar sinergia operativa, eficiencia y ventajas competitivas.</p>
-        </div>
-
-        <div class="card">
-          <h3>Escalabilidad</h3>
-          <p>La arquitectura conceptual del proyecto está pensada para crecer por fases, adaptarse y expandirse a nuevos mercados.</p>
-        </div>
-
-        <div class="card">
-          <h3>Calidad no negociable</h3>
-          <p>Todos los desarrollos deben apuntar al mejor estándar posible en diseño, seguridad, operación y experiencia final.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contacto">
-    <div class="container">
-      <h2 class="section-title">Contacto</h2>
-      <div class="contact-box">
-        <p>
-          ¿Querés conocer más sobre ROLICON VALLEY, colaborar, invertir o seguir el desarrollo del proyecto?
-        </p>
-        <p>
-          Podés reemplazar este texto por tu WhatsApp, email, redes sociales o formulario.
-        </p>
-        <div class="buttons">
-          <a href="https://wa.me/549XXXXXXXXXX" class="btn btn-primary" target="_blank">WhatsApp</a>
-          <a href="mailto:tuemail@ejemplo.com" class="btn btn-secondary">Email</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    © 2026 ROLICON VALLEY - Todos los derechos reservados
-  </footer>
+<section>
+  <h2>Contacto</h2>
+  <p>Próximamente...</p>
+</section>
 
 </body>
 </html>
