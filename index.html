@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ROLICON VALLEY</title>
-  <meta name="description" content="ROLICON VALLEY: ecosistema de innovación en blockchain, logística inteligente, software, automatización, energía, robótica, salud, banca y conectividad.">
+  <meta name="description" content="ROLICON VALLEY: ecosistema de innovación en blockchain, logística inteligente, software, automatización, energía, robótica, banca y conectividad." />
 
   <style>
     * {
@@ -19,9 +19,10 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: #081126;
+      background: linear-gradient(180deg, #081126 0%, #0a1430 45%, #081126 100%);
       color: white;
       line-height: 1.5;
+      overflow-x: hidden;
     }
 
     a {
@@ -35,15 +36,15 @@
       left: 0;
       width: 100%;
       z-index: 1000;
-      background: rgba(5, 10, 25, 0.85);
+      background: rgba(5, 10, 25, 0.82);
       backdrop-filter: blur(8px);
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     .nav-container {
-      max-width: 1300px;
+      max-width: 1280px;
       margin: 0 auto;
-      padding: 18px 22px;
+      padding: 16px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -60,13 +61,14 @@
 
     nav {
       display: flex;
-      gap: 20px;
+      gap: 22px;
       flex-wrap: wrap;
       justify-content: center;
+      align-items: center;
     }
 
     nav a {
-      color: #ffffff;
+      color: white;
       font-weight: 700;
       font-size: 15px;
       transition: 0.25s ease;
@@ -79,7 +81,7 @@
     .hero {
       min-height: 100vh;
       background:
-        linear-gradient(rgba(4, 10, 25, 0.45), rgba(4, 10, 25, 0.72)),
+        linear-gradient(rgba(4, 10, 25, 0.42), rgba(4, 10, 25, 0.70)),
         url('hero-rolicon.jpeg');
       background-size: cover;
       background-position: center;
@@ -92,34 +94,39 @@
 
     .hero-content {
       max-width: 1050px;
+      background: rgba(8, 17, 38, 0.38);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 24px;
+      padding: 34px 28px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.22);
     }
 
     .hero h1 {
-      font-size: 72px;
+      font-size: 62px;
       line-height: 1.05;
-      margin-bottom: 24px;
-      text-shadow: 0 4px 25px rgba(0,0,0,0.45);
+      margin-bottom: 20px;
+      text-shadow: 0 4px 18px rgba(0,0,0,0.35);
     }
 
     .hero p {
-      max-width: 900px;
-      margin: 0 auto 30px;
-      font-size: 24px;
+      max-width: 860px;
+      margin: 0 auto 28px;
+      font-size: 22px;
       color: #eefcff;
-      text-shadow: 0 3px 18px rgba(0,0,0,0.35);
+      text-shadow: 0 3px 14px rgba(0,0,0,0.28);
     }
 
     .hero-buttons {
       display: flex;
       justify-content: center;
-      gap: 16px;
+      gap: 14px;
       flex-wrap: wrap;
     }
 
     .btn-primary,
     .btn-secondary {
       display: inline-block;
-      padding: 15px 30px;
+      padding: 14px 28px;
       border-radius: 12px;
       font-weight: 800;
       font-size: 16px;
@@ -129,18 +136,18 @@
     .btn-primary {
       background: linear-gradient(90deg, #7efde4, #b8fff5);
       color: #081126;
-      box-shadow: 0 8px 28px rgba(126, 253, 228, 0.28);
+      box-shadow: 0 8px 24px rgba(126, 253, 228, 0.28);
     }
 
     .btn-primary:hover {
-      transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 12px 34px rgba(126, 253, 228, 0.36);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(126, 253, 228, 0.36);
     }
 
     .btn-secondary {
-      border: 1px solid rgba(255,255,255,0.35);
+      border: 1px solid rgba(255,255,255,0.30);
+      background: rgba(255,255,255,0.07);
       color: white;
-      background: rgba(255,255,255,0.06);
     }
 
     .btn-secondary:hover {
@@ -159,8 +166,8 @@
 
     .section-title {
       text-align: center;
-      font-size: 46px;
-      margin-bottom: 20px;
+      font-size: 44px;
+      margin-bottom: 18px;
       color: #ffffff;
     }
 
@@ -168,39 +175,12 @@
       text-align: center;
       max-width: 980px;
       margin: 0 auto;
-      font-size: 22px;
+      font-size: 21px;
       color: #dcecff;
     }
 
     .vision {
       background: linear-gradient(180deg, #09152d 0%, #0c1935 100%);
-    }
-
-    .video-section {
-      background: linear-gradient(180deg, #081126 0%, #0a1430 100%);
-    }
-
-    .video-box {
-      margin-top: 42px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 14px 40px rgba(0,0,0,0.25);
-    }
-
-    .video-box video {
-      display: block;
-      width: 100%;
-      height: auto;
-      background: #030814;
-    }
-
-    .video-note {
-      padding: 22px;
-      text-align: center;
-      color: #dcecff;
-      font-size: 18px;
     }
 
     .cards-section {
@@ -230,49 +210,37 @@
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.14);
       border-radius: 18px;
-      padding: 26px;
+      padding: 22px;
       transition: 0.25s ease;
       box-shadow: 0 8px 24px rgba(0,0,0,0.18);
       height: 100%;
+      text-align: left;
     }
 
     .card:hover {
       transform: translateY(-4px);
-      border-color: rgba(143,255,231,0.4);
-      box-shadow: 0 14px 34px rgba(0,0,0,0.24);
+      border-color: rgba(143,255,231,0.45);
+      box-shadow: 0 0 22px rgba(0,255,204,0.35);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-bottom: 16px;
+      display: block;
     }
 
     .card h3 {
-      font-size: 27px;
-      margin-bottom: 14px;
+      font-size: 28px;
+      margin-bottom: 12px;
       color: #a5fff0;
     }
 
     .card p {
       font-size: 18px;
       color: #e5f0ff;
-    }
-
-    .cards-links {
-      margin-top: 16px;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .mini-btn {
-      display: inline-block;
-      padding: 10px 14px;
-      border-radius: 10px;
-      font-size: 14px;
-      font-weight: bold;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.16);
-      color: #dffdf6;
-    }
-
-    .mini-btn:hover {
-      background: rgba(255,255,255,0.14);
     }
 
     .contact-box {
@@ -302,19 +270,18 @@
 
     @media (max-width: 980px) {
       .hero h1 {
-        font-size: 52px;
+        font-size: 50px;
       }
 
       .hero p,
       .section-text,
       .card p,
-      .contact-box p,
-      .video-note {
+      .contact-box p {
         font-size: 18px;
       }
 
       .section-title {
-        font-size: 38px;
+        font-size: 36px;
       }
     }
 
@@ -333,7 +300,7 @@
       }
 
       .hero h1 {
-        font-size: 40px;
+        font-size: 38px;
       }
 
       .hero p {
@@ -341,11 +308,15 @@
       }
 
       .section-title {
-        font-size: 32px;
+        font-size: 30px;
       }
 
       .logo {
         font-size: 18px;
+      }
+
+      .card img {
+        height: 190px;
       }
     }
   </style>
@@ -358,7 +329,6 @@
       <nav>
         <a href="#inicio">Inicio</a>
         <a href="#vision">Visión</a>
-        <a href="#sobrevuelo">Sobrevuelo</a>
         <a href="#cartas">Cartas</a>
         <a href="#ecosistema">Ecosistema</a>
         <a href="#propuesta">Propuesta</a>
@@ -376,7 +346,7 @@
         conectividad, energía, robótica y desarrollo humano.
       </p>
       <div class="hero-buttons">
-        <a class="btn-primary" href="#sobrevuelo">Ver sobrevuelo</a>
+        <a class="btn-primary" href="#ecosistema">Explorar ecosistema</a>
         <a class="btn-secondary" href="#cartas">Ver cartas</a>
       </div>
     </div>
@@ -393,25 +363,6 @@
         La calidad no se negocia. Cada unidad del ecosistema está pensada para operar con estándares altos,
         visión de largo plazo y capacidad de expansión nacional e internacional.
       </p>
-    </div>
-  </section>
-
-  <section class="video-section" id="sobrevuelo">
-    <div class="container">
-      <h2 class="section-title">Sobrevuelo de ROLICON VALLEY</h2>
-      <p class="section-text">
-        Un recorrido visual del ecosistema para mostrar su escala, su identidad tecnológica y la integración entre ciudad, logística, puerto, software y automatización.
-      </p>
-
-      <div class="video-box">
-        <video controls preload="metadata" poster="hero-rolicon.jpeg">
-          <source src="sobrevuelo-rolicon.mp4" type="video/mp4">
-          Tu navegador no soporta video HTML5.
-        </video>
-        <div class="video-note">
-          Cuando subas el archivo <strong>sobrevuelo-rolicon.mp4</strong> al repositorio, el video aparecerá acá automáticamente.
-        </div>
-      </div>
     </div>
   </section>
 
@@ -459,24 +410,48 @@
       </p>
 
       <div class="grid">
-        <div class="card"><h3>RoloCoin</h3><p>Infraestructura financiera digital pensada para integrarse con el ecosistema y potenciar nuevas formas de intercambio, incentivos y expansión económica.</p></div>
-        <div class="card"><h3>Blockchain Box</h3><p>Buzones inteligentes y soluciones de entrega automatizada para transformar la logística de última milla y la recepción de paquetes.</p></div>
-        <div class="card"><h3>ROLOSOFT</h3><p>Centro de desarrollo de software del ecosistema. Núcleo de plataformas, automatización, inteligencia operativa y escalabilidad digital.</p></div>
-        <div class="card"><h3>ROLOROBOTICS</h3><p>Robots autónomos, drones, vehículos inteligentes y sistemas avanzados para automatizar operaciones logísticas y productivas.</p></div>
-        <div class="card"><h3>ROLOSECURITY</h3><p>División especializada en ciberseguridad avanzada, criptografía, protección de infraestructura crítica y seguridad digital del ecosistema.</p></div>
-        <div class="card"><h3>RoloSpace</h3><p>Conectividad satelital, expansión tecnológica y resiliencia de comunicaciones para operar incluso en escenarios extremos.</p></div>
-        <div class="card"><h3>RoloWallet</h3><p>Sistema de pagos autónomo con visión de operar con energía independiente y servir como infraestructura financiera resiliente.</p></div>
-        <div class="card"><h3>RoloPay</h3><p>Hardware y tecnología de pagos autónomos con foco en continuidad operativa, autonomía energética y resistencia ante apagones.</p></div>
-        <div class="card"><h3>ROLOBANK</h3><p>Unidad financiera pensada para abrir crédito y servicios a personas fuera del sistema tradicional, integrando modelos descentralizados.</p></div>
-        <div class="card"><h3>MedBlock Salud</h3><p>Centro de salud, investigación médica, farmacéutica, exoesqueletos, movilidad asistida y tecnología aplicada al bienestar humano.</p></div>
-        <div class="card"><h3>BIOGEN ROLI</h3><p>División de bioenergía y tecnologías renovables basadas en plantas, residuos orgánicos y nuevas fuentes de generación sustentable.</p></div>
-        <div class="card"><h3>ECO CHISPA</h3><p>Complejo estratégico de energías renovables y generación integrada para asegurar autonomía operativa del ecosistema.</p></div>
-        <div class="card"><h3>ROLOSCHOOL</h3><p>Centro de educación y capacitación en blockchain, inteligencia artificial, robótica, software y logística automatizada.</p></div>
-        <div class="card"><h3>TeamNorth</h3><p>Núcleo de desarrollo y articulación estratégica de nuevas iniciativas tecnológicas, comerciales y de ejecución dentro del ecosistema.</p></div>
-        <div class="card"><h3>Dtodito8</h3><p>E-commerce propio del ecosistema, pensado para integrarse con la red logística, los pagos digitales y la infraestructura tecnológica de ROLICON.</p></div>
-        <div class="card"><h3>BA Taxi</h3><p>Integración de movilidad inteligente, transporte, puntos de entrega y futura conexión con automatización, incentivos y RoloCoin.</p></div>
-        <div class="card"><h3>ROLOBUNKER</h3><p>Red de refugios autosustentables con energía, agua, seguridad avanzada y conectividad satelital para escenarios de crisis global.</p></div>
-        <div class="card"><h3>ROLICON Startups Hub</h3><p>Espacio para incubar nuevas startups del ecosistema, acelerar alianzas, formar equipos y expandir la innovación hacia mercados globales.</p></div>
+        <div class="card">
+          <img src="rolocoin.png.jpeg" alt="RoloCoin">
+          <h3>RoloCoin</h3>
+          <p>Criptomoneda central del ecosistema, diseñada para pagos descentralizados y economía digital.</p>
+        </div>
+
+        <div class="card">
+          <img src="blockchainbox.png.jpeg" alt="Blockchain Box">
+          <h3>Blockchain Box</h3>
+          <p>Infraestructura logística inteligente con integración blockchain para entregas seguras y automatizadas.</p>
+        </div>
+
+        <div class="card">
+          <img src="editorflex.jpeg" alt="EditoFlex">
+          <h3>EditoFlex</h3>
+          <p>Servicios logísticos flexibles y articulación operativa dentro del ecosistema.</p>
+        </div>
+
+        <div class="card">
+          <h3>Detutty Online</h3>
+          <p>E-commerce integrado al ecosistema, preparado para conectarse con logística propia y pagos descentralizados.</p>
+        </div>
+
+        <div class="card">
+          <h3>ROLOSOFT</h3>
+          <p>Centro de desarrollo de software del ecosistema. Núcleo de automatización, plataformas e inteligencia operativa.</p>
+        </div>
+
+        <div class="card">
+          <h3>ROLOBANK</h3>
+          <p>Servicios financieros descentralizados y visión de inclusión económica para usuarios fuera del sistema tradicional.</p>
+        </div>
+
+        <div class="card">
+          <h3>ROLOSECURITY</h3>
+          <p>Ciberseguridad avanzada, protección de infraestructura crítica y arquitectura digital de alta exigencia.</p>
+        </div>
+
+        <div class="card">
+          <h3>ROLOROBOTICS</h3>
+          <p>Robótica, automatización, drones y sistemas inteligentes orientados a logística y operación a gran escala.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -485,12 +460,35 @@
     <div class="container">
       <h2 class="section-title">Propuesta de valor</h2>
       <div class="grid">
-        <div class="card"><h3>Innovación real</h3><p>No se trata solo de ideas futuristas. El objetivo es convertir visión en productos, sistemas, plataformas y estructuras funcionales.</p></div>
-        <div class="card"><h3>Integración total</h3><p>Cada unidad del ecosistema se conecta con las demás para generar sinergia operativa, eficiencia y ventajas competitivas.</p></div>
-        <div class="card"><h3>Escalabilidad</h3><p>La arquitectura conceptual del proyecto está pensada para crecer por fases, adaptarse y expandirse a nuevos mercados.</p></div>
-        <div class="card"><h3>Calidad no negociable</h3><p>Todos los desarrollos deben apuntar al mejor estándar posible en diseño, seguridad, operación y experiencia final.</p></div>
-        <div class="card"><h3>Resiliencia</h3><p>ROLICON busca construir infraestructura capaz de operar en escenarios complejos, con autonomía energética, conectividad y respaldo estratégico.</p></div>
-        <div class="card"><h3>Visión global</h3><p>El objetivo no es crear una empresa aislada, sino un ecosistema replicable con alcance nacional e internacional.</p></div>
+        <div class="card">
+          <h3>Innovación real</h3>
+          <p>No se trata solo de ideas futuristas. El objetivo es convertir visión en productos, sistemas, plataformas y estructuras funcionales.</p>
+        </div>
+
+        <div class="card">
+          <h3>Integración total</h3>
+          <p>Cada unidad del ecosistema se conecta con las demás para generar sinergia operativa, eficiencia y ventajas competitivas.</p>
+        </div>
+
+        <div class="card">
+          <h3>Escalabilidad</h3>
+          <p>La arquitectura conceptual del proyecto está pensada para crecer por fases, adaptarse y expandirse a nuevos mercados.</p>
+        </div>
+
+        <div class="card">
+          <h3>Calidad no negociable</h3>
+          <p>Todos los desarrollos deben apuntar al mejor estándar posible en diseño, seguridad, operación y experiencia final.</p>
+        </div>
+
+        <div class="card">
+          <h3>Resiliencia</h3>
+          <p>ROLICON busca construir infraestructura capaz de operar en escenarios complejos, con autonomía energética, conectividad y respaldo estratégico.</p>
+        </div>
+
+        <div class="card">
+          <h3>Visión global</h3>
+          <p>El objetivo no es crear una empresa aislada, sino un ecosistema replicable con alcance nacional e internacional.</p>
+        </div>
       </div>
     </div>
   </section>
