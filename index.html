@@ -119,6 +119,7 @@ section{
   padding:20px;
   border-radius:15px;
   transition:0.3s;
+  cursor:pointer;
 }
 
 .card img{
@@ -132,6 +133,46 @@ section{
   box-shadow:0 0 20px #00ffcc;
 }
 
+/* MODAL */
+
+#modal{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.85);
+  z-index:2000;
+  justify-content:center;
+  align-items:center;
+}
+
+.modal-content{
+  background:#0a1430;
+  padding:30px;
+  border-radius:15px;
+  max-width:600px;
+  width:90%;
+  position:relative;
+}
+
+.modal-content h2{
+  margin-bottom:15px;
+}
+
+.modal-content p{
+  font-size:18px;
+  line-height:1.6;
+}
+
+.close{
+  position:absolute;
+  top:10px;
+  right:15px;
+  cursor:pointer;
+  font-size:20px;
+}
 </style>
 </head>
 
@@ -149,7 +190,7 @@ section{
   </nav>
 </header>
 
-<!-- HERO VIDEO -->
+<!-- HERO -->
 <section id="inicio" class="hero">
 
   <video autoplay muted loop playsinline>
@@ -172,8 +213,7 @@ section{
     <h2 class="section-title">Nuestra visión</h2>
     <p class="section-text">
       Construir un ecosistema tecnológico global basado en blockchain, inteligencia artificial
-      y logística automatizada. Un sistema donde cada unidad se conecta para generar eficiencia,
-      escalabilidad y crecimiento económico real.
+      y logística automatizada.
     </p>
   </div>
 </section>
@@ -199,61 +239,42 @@ section{
 
     <div class="grid">
 
-      <div class="card">
+      <div class="card" onclick="abrirModal('RoloCoin','RoloCoin es la criptomoneda central del ecosistema ROLICON, diseñada para facilitar transacciones descentralizadas y crear una economía digital propia.')">
         <img src="rolocoin.png.jpeg">
         <h3>RoloCoin</h3>
-        <p>Criptomoneda del ecosistema.</p>
       </div>
 
-      <div class="card">
+      <div class="card" onclick="abrirModal('Blockchain Box','Infraestructura de buzones inteligentes para logística automatizada con trazabilidad total.')">
         <img src="blockchainbox.png.jpeg">
         <h3>Blockchain Box</h3>
-        <p>Infraestructura logística inteligente.</p>
       </div>
 
-      <div class="card">
+      <div class="card" onclick="abrirModal('EditoFlex','Sistema logístico flexible optimizado con tecnología para entregas dinámicas.')">
         <img src="editorflex.jpeg">
         <h3>EditoFlex</h3>
-        <p>Servicios logísticos flexibles.</p>
       </div>
 
-      <div class="card">
+      <div class="card" onclick="abrirModal('Detutty Online','Plataforma de e-commerce integrada con logística y pagos propios.')">
         <h3>Detutty Online</h3>
-        <p>E-commerce integrado.</p>
       </div>
 
-      <div class="card">
+      <div class="card" onclick="abrirModal('ROLOSOFT','Centro de desarrollo de software del ecosistema.')">
         <h3>ROLOSOFT</h3>
-        <p>Desarrollo de software.</p>
       </div>
 
-      <div class="card">
+      <div class="card" onclick="abrirModal('ROLOBANK','Sistema financiero descentralizado.')">
         <h3>ROLOBANK</h3>
-        <p>Servicios financieros.</p>
       </div>
 
-      <div class="card">
+      <div class="card" onclick="abrirModal('ROLOSECURITY','Ciberseguridad avanzada para proteger todo el ecosistema.')">
         <h3>ROLOSECURITY</h3>
-        <p>Ciberseguridad avanzada.</p>
       </div>
 
-      <div class="card">
+      <div class="card" onclick="abrirModal('ROLOROBOTICS','Robótica y automatización para logística avanzada.')">
         <h3>ROLOROBOTICS</h3>
-        <p>Robótica y automatización.</p>
       </div>
 
     </div>
-  </div>
-</section>
-
-<!-- PROPUESTA -->
-<section id="propuesta">
-  <div class="container">
-    <h2 class="section-title">Propuesta</h2>
-    <p class="section-text">
-      Crear una infraestructura global tecnológica basada en blockchain,
-      inteligencia artificial y logística automatizada.
-    </p>
   </div>
 </section>
 
@@ -270,6 +291,28 @@ section{
 
   </div>
 </section>
+
+<!-- MODAL -->
+<div id="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModal()">✖</span>
+    <h2 id="modalTitulo"></h2>
+    <p id="modalTexto"></p>
+  </div>
+</div>
+
+<!-- SCRIPT -->
+<script>
+function abrirModal(titulo,texto){
+  document.getElementById("modal").style.display="flex";
+  document.getElementById("modalTitulo").innerText=titulo;
+  document.getElementById("modalTexto").innerText=texto;
+}
+
+function cerrarModal(){
+  document.getElementById("modal").style.display="none";
+}
+</script>
 
 </body>
 </html>
